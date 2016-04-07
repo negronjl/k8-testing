@@ -1,0 +1,18 @@
+kind: "ReplicationController"
+apiVersion: "v1"
+metadata:
+  name: "webtest-controller"
+spec:
+  replicas: 10
+  selector:
+    app: webtest
+  template:
+    metadata:
+      labels:
+        app: webtest
+    spec:
+      containers:
+      - name: webtest
+        image: gcr.io/juan-negron/webtest
+        ports:
+        - containerPort: 8080
