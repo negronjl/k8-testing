@@ -38,7 +38,7 @@ After a few minutes, you'll have a working Kubernetes cluster with three nodes (
 
 The `webtest/bin` folder contains a simple Golang Web Application as the "system under test".
 
-    $ docker build -t USERNAME/web .
+    $ docker build -t USERNAME/webtest .
     $ docker tag USERNAME/webtest gcr.io/PROJECT-ID/webtest
     $ gcloud preview docker --project PROJECT-ID push gcr.io/PROJECT-ID/webtest
 	$ kubectl create -f webtest-rc.yaml
